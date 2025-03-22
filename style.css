@@ -131,9 +131,15 @@ h1 {
 }
 
 .app .name {
-    white-space: nowrap;
-    font-size: 1rem;
+    word-wrap: break-word;
+    text-align: center;
+    max-width: 120px; /* Adjust as needed */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
 
 /* ✅ Shortcut Icons */
 .icon img, .icon svg {
