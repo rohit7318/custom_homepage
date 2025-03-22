@@ -105,12 +105,15 @@ h1 {
 .card {
     width: 140px;
     min-width: 120px;
+    aspect-ratio: 1;
     flex: 0 0 auto;
     text-align: center;
     position: relative;
     border: 1px solid white;
     border-radius: 10px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
