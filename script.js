@@ -6,6 +6,28 @@ const formEl = document.querySelector('form');
 const formCloseBtn = document.querySelector('.close');
 const submitForm = document.getElementById("submitForm");
 const appsContainerEl = document.querySelector('.apps-container');
+const heading = document.getElementById('heading');
+
+
+
+
+window.onload  = function ()
+{
+    let text = heading.textContent;
+    if(!text) return;
+
+    heading.textContent = "";
+
+
+    text.split('').forEach((char,index)=>{
+        let span = document.createElement('span');
+        span.textContent = char; 
+        span.style.animationDelay= `${index * 0.1}s`;
+        heading.appendChild(span);
+    });
+}
+
+
 
 // Load saved shortcuts on page load
 document.addEventListener("DOMContentLoaded", loadShortcuts);
@@ -136,3 +158,7 @@ function searchGoogle() {
         window.open(googleSearchUrl, "_blank");
     }
 }
+
+
+
+
